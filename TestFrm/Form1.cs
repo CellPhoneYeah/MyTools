@@ -24,9 +24,9 @@ namespace TestFrm
 
         void Form1_Load(object sender, EventArgs e)
         {
-            PluginFactory pluginFactory = new PluginFactory("TestMEF", @"..\..\REFDLL", "*.dll");
-            ILog log = pluginFactory.GetPlugin<ILog>();
-            MessageBox.Show(log.Prefix());
+            //PluginFactory pluginFactory = new PluginFactory("TestMEF", @"..\..\REFDLL", "*.dll");
+            //ILog log = pluginFactory.GetPlugin<ILog>();
+            //MessageBox.Show(log.Prefix());
             //CYFSqlDALHelper helper = new CYFSqlDALHelper();
             //try
             //{
