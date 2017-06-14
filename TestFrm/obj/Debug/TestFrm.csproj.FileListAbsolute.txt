@@ -1,0 +1,13 @@
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\bin\Debug\TestFrm.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\bin\Debug\TestFrm.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\obj\Debug\TestFrm.csprojResolveAssemblyReference.cache
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\obj\Debug\TestFrm.Form1.resources
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\obj\Debug\TestFrm.Properties.Resources.resources
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\obj\Debug\TestFrm.csproj.GenerateResource.Cache
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\obj\Debug\TestFrm.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\obj\Debug\TestFrm.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\bin\Debug\TestFrm.exe.config
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\bin\Debug\ChaYeFeng.dll
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\bin\Debug\ChaYeFeng.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\bin\Debug\TestMEFInterface.dll
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\bin\Debug\TestMEFInterface.pdb

@@ -1,0 +1,11 @@
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestMEF\bin\Debug\TestMEF.dll
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestMEF\bin\Debug\TestMEF.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestMEF\bin\Debug\TestMEFInterface.dll
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestMEF\bin\Debug\TestMEFInterface.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestMEF\obj\Debug\TestMEF.csprojResolveAssemblyReference.cache
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestMEF\obj\Debug\TestMEF.dll
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestMEF\obj\Debug\TestMEF.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\bin\Debug\TestMEF.dll
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\bin\Debug\TestMEF.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\REFDLL\TestMEF.dll
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\REFDLL\TestMEF.pdb

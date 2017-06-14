@@ -1,0 +1,27 @@
+2017-06-08 04-25-18: insert into testtable values('002','叶晓峰','1','13751732465','随便')
+2017-06-08 04-25-18: insert into testtable values('002','叶晓峰','1','13751732465','随便')
+WriteLog  2017-06-08 04-30-13: insert into testtable values('002','叶晓峰','1','13751732465','随便')
+WriteLog  2017-06-08 04-30-13: insert into testtable values('002','叶晓峰','1','13751732465','随便')
+2017-06-08 04-36-43:
+模块名:ChaYeFeng.dll
+命名空间名:ChaYeFeng
+类名:ChaYeFeng.CYFLog
+方法名:WriteLog(): insert into testtable values('002','叶晓峰','1','13751732465','随便')
+2017-06-08 04-36-43:
+模块名:ChaYeFeng.dll
+命名空间名:ChaYeFeng
+类名:ChaYeFeng.CYFLog
+方法名:WriteLog(): insert into testtable values('002','叶晓峰','1','13751732465','随便')
+2017-06-08 04-39-46
+2017-06-08 04-39-46
+2017-06-08 04-42-07: insert into testtable values('005','叶晓峰','1','13751732465','随便')
+2017-06-08 04-42-07: insert into testtable values('006','王者','0','13751732435','的')
+2017-06-08 04-42-07: insert into testtable values('007','王大者','0','13751756435','的')
+2017-06-08 04:46:39: insert into testtable values('005','叶晓峰','1','13751732465','随便')
+2017-06-08 04:46:48: insert into testtable values('005','叶晓峰','1','13751732465','随便')
+2017-06-08 04:47:56: insert into testtable values('005','叶晓峰','1','13751732465','随便')
+2017-06-08 04:56:50:select * from testtable 
+2017-06-08 04:57:14:select * from testtable 
+2017-06-08 04:58:01:select * from testtable 
+2017-06-08 04:59:44:select * from testtable 
+2017-06-08 05:02:34:select * from testtable 
