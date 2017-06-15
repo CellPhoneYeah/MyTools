@@ -49,6 +49,9 @@ namespace TestFrm
             //    helper.RollBack();
             //    CYFLog.WriteLog(ex.Message);
             //}
+            string temp;
+            CYFStringValidates.GetValidateNum(textBox1.Text, out temp);
+                MessageBox.Show(temp);
         }
 
         private void button1_Click(object sender, EventArgs e)

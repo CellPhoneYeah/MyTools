@@ -59,6 +59,7 @@
     <Compile Include="CYFLog\CYFLog.cs" />
     <Compile Include="CYFLog\CYFLogConfig.cs" />
     <Compile Include="CYFMEF\PluginFactory.cs" />
+    <Compile Include="CYFValidte\CYFStringValidates.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ChayefengDAL\SQLServerDAL.cs" />
   </ItemGroup>
