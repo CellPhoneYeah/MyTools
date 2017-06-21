@@ -104,7 +104,7 @@ namespace ChaYeFeng
                 {
                     cStream.Write(originalByte, 0, originalByte.Length);
                     cStream.FlushFinalBlock();
-                    result = encoding.GetString(mStream.ToArray());
+                    result = Convert.ToBase64String(mStream.ToArray());
                 }
             }
             return result;
@@ -127,7 +127,7 @@ namespace ChaYeFeng
             bKey = keyVal.Format16Byte(encoding);
             bVector = ivVal.Format16Byte(encoding);
             string result = string.Empty;
-            byte[] originalByte = encoding.GetBytes(value);
+            byte[] originalByte = Convert.FromBase64String(value);
             Rijndael aes = Rijndael.Create();
             using (MemoryStream mStream = new MemoryStream())
             {
