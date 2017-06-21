@@ -24,10 +24,14 @@ namespace TestFrm
 
         void Form1_Load(object sender, EventArgs e)
         {
-            txtkey.Text = "1234567892587413";
-            txtvector.Text = "9632587412589632";
-            label1.Text = textBox1.Text.AesStr(txtkey.Text,txtvector.Text);
-            label2.Text = label1.Text.UnAesStr(txtkey.Text, txtvector.Text);
+            //txtkey.Text = "1234567892587413";
+            //txtvector.Text = "9632587412589632";
+            //label1.Text = textBox1.Text.AesStr(txtkey.Text,txtvector.Text);
+            //label2.Text = label1.Text.UnAesStr(txtkey.Text, txtvector.Text);
+            List<string> list = new List<string>();
+            list.Add("'123'");
+            list.Add("'456'");
+            textBox1.Text = string.Join(",", list.ToArray());
         }
 
         private void button1_Click(object sender, EventArgs e)
