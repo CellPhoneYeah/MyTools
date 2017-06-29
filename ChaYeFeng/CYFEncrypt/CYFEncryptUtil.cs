@@ -358,6 +358,28 @@ namespace ChaYeFeng
             MD5 md5 = MD5.Create();
             return HashAlgorithmBase(md5, value, encoding);
         }
+
+        /// <summary>
+        /// 加权MD5
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="salt"></param>
+        /// <returns></returns>
+        public static string Md532(this string value, string salt)
+        {
+            return salt == null ? value.Md532() : (value + "[" + salt + "]").Md532();
+        }
+        #endregion
+
+        #region SHA加密
+        public static string Sha1(this string value)
+        {
+            if (value == null)
+                throw new ArgumentNullException("不能对空字符串进行Sha1加密");
+            Encoding encoding = Encoding.UTF8;
+            SHA1 sha1 = new SHA1CryptoServiceProvider();
+            return HashAlgorithmBase(sha1, value, encoding);
+        }
         #endregion
 
     }
