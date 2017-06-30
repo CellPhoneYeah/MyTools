@@ -21,7 +21,7 @@ namespace ChaYeFeng
         /// </summary>
         private Dictionary<TKey, TData> _Dict;
         /// <summary>
-        /// 缓存列表对象
+        /// 缓存数据列表对象
         /// </summary>
         private List<TData> _List;
         /// <summary>
@@ -38,7 +38,7 @@ namespace ChaYeFeng
             get { return this._Dict.Count; }
         }
         /// <summary>
-        /// 列表数据
+        /// 缓存数据列表对象
         /// </summary>
         public List<TData> List
         {

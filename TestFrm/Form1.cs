@@ -27,6 +27,8 @@ namespace TestFrm
 
         void Form1_Load(object sender, EventArgs e)
         {
+            CYFConfigHelper.GetSetting("PluginName");
+            CYFConfigHelper.GetConnectionString("test");
             Encoding ed = Encoding.UTF8;
             byte[] sourceByte = ed.GetBytes(txtSource.Text);
             byte[] keyValue = ed.GetBytes(txtKey.Text);
