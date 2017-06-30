@@ -63,6 +63,7 @@
     <Compile Include="CYFMEF\PluginFactory.cs" />
     <Compile Include="CYFStringHelper\CYFStringHelper.cs" />
     <Compile Include="CYFValidte\CYFStringValidates.cs" />
+    <Compile Include="CYFXMLHelper\CYFXMLHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ChayefengDAL\SQLServerDAL.cs" />
   </ItemGroup>
