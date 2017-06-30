@@ -12,6 +12,8 @@ using ChaYeFeng;
 using System.Data.SqlClient;
 using TestMEFInterface;
 using System.Collections;
+using System.Security.Cryptography;
+using System.IO;
 
 namespace TestFrm
 {
@@ -25,40 +27,32 @@ namespace TestFrm
 
         void Form1_Load(object sender, EventArgs e)
         {
-            List<DictionaryEntry> list = new List<DictionaryEntry>();
-            list.Add(new DictionaryEntry("Md532", "Md532"));
-            list.Add(new DictionaryEntry("加权MD5", "加权MD5"));
-            list.Add(new DictionaryEntry("加权SHA1", "加权SHA1"));
-            list.Add(new DictionaryEntry("SHA256", "SHA256"));
-            list.Add(new DictionaryEntry("SHA512", "SHA512"));
-            list.Add(new DictionaryEntry("HmacSha1", "HmacSha1"));
-            list.Add(new DictionaryEntry("HmacSha256", "HmacSha256"));
-            list.Add(new DictionaryEntry("HmacSha384", "HmacSha384"));
-            list.Add(new DictionaryEntry("HmacSha512", "HmacSha512"));
-            list.Add(new DictionaryEntry("HmacMd5", "HmacMd5"));
-            list.Add(new DictionaryEntry("HmacRipeMd160", "HmacRipeMd160"));
-            list.Add(new DictionaryEntry("AES", "AES"));
-            list.Add(new DictionaryEntry("AES Byte", "AES Byte"));
-            list.Add(new DictionaryEntry("DES", "DES"));
-            list.Add(new DictionaryEntry("BASE64", "BASE64"));
-            txtkey.Text = "1234567892587413";
-            txtvector.Text = "9632587412589632";
-            label1.Text = textBox1.Text.AesStr(txtkey.Text, txtvector.Text);
-            label2.Text = label1.Text.UnAesStr(txtkey.Text, txtvector.Text);
-            //List<string> list = new List<string>();
-            //list.Add("'123'");
-            //list.Add("'456'");
-            //textBox1.Text = string.Join(",", list.ToArray());
-        }
-
-        private string EncryptStr(string source)
-        {
-            switch (comboBox1.Text)
+            Encoding ed = Encoding.UTF8;
+            byte[] sourceByte = ed.GetBytes(txtSource.Text);
+            byte[] keyValue = ed.GetBytes(txtKey.Text);
+            byte[] vecValue = ed.GetBytes(txtvector.Text);
+            byte[] byteResult;
+            Rijndael rij = Rijndael.Create();
+            using (MemoryStream ms = new MemoryStream())
             {
-                case "Md532":
-                    return source.Md532
-                default:
-                    break;
+                using (CryptoStream cs = new CryptoStream(ms,rij.CreateEncryptor(keyValue,vecValue),CryptoStreamMode.Write))
+                {
+                    cs.Write(sourceByte, 0, sourceByte.Length);
+                    cs.FlushFinalBlock();
+                    byteResult = ms.ToArray();
+                    rtbResult.Text = Convert.ToBase64String(byteResult);
+                }
+            }
+
+            byte[] tempValue = Convert.FromBase64String(rtbResult.Text.Trim());
+            using (MemoryStream ms = new MemoryStream())
+            {
+                using (CryptoStream cs = new CryptoStream(ms, rij.CreateDecryptor(keyValue, vecValue), CryptoStreamMode.Write))
+                {
+                    cs.Write(tempValue, 0, tempValue.Length);
+                    cs.FlushFinalBlock();
+                    rtbResult.Text += "\t\n"+ed.GetString(ms.ToArray());
+                }
             }
         }
 

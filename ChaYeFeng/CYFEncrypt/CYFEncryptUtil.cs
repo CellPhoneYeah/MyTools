@@ -99,8 +99,8 @@ namespace ChaYeFeng
             using (MemoryStream mStream = new MemoryStream())
             {
                 using (CryptoStream cStream = new CryptoStream(mStream
-                    ,aes.CreateEncryptor(bKey,bVector)
-                    ,CryptoStreamMode.Write))
+                    , aes.CreateEncryptor(bKey, bVector)
+                    , CryptoStreamMode.Write))
                 {
                     cStream.Write(originalByte, 0, originalByte.Length);
                     cStream.FlushFinalBlock();
@@ -132,8 +132,8 @@ namespace ChaYeFeng
             using (MemoryStream mStream = new MemoryStream())
             {
                 using (CryptoStream cStream = new CryptoStream(mStream
-                    ,aes.CreateDecryptor(bKey,bVector)
-                    ,CryptoStreamMode.Write))
+                    , aes.CreateDecryptor(bKey, bVector)
+                    , CryptoStreamMode.Write))
                 {
                     cStream.Write(originalByte, 0, originalByte.Length);
                     cStream.FlushFinalBlock();
@@ -169,8 +169,8 @@ namespace ChaYeFeng
                 using (MemoryStream mStream = new MemoryStream())
                 {
                     using (CryptoStream cStream = new CryptoStream(mStream
-                        ,aes.CreateEncryptor(bKey,bVector)
-                        ,CryptoStreamMode.Write))
+                        , aes.CreateEncryptor(bKey, bVector)
+                        , CryptoStreamMode.Write))
                     {
                         cStream.Write(data, 0, data.Length);
                         cStream.FlushFinalBlock();
@@ -209,8 +209,8 @@ namespace ChaYeFeng
                 using (MemoryStream mStream = new MemoryStream())
                 {
                     using (CryptoStream cStream = new CryptoStream(mStream
-                        ,aes.CreateDecryptor(bKey,bVector)
-                        ,CryptoStreamMode.Read))
+                        , aes.CreateDecryptor(bKey, bVector)
+                        , CryptoStreamMode.Read))
                     {
                         byte[] buffer = new byte[1024];
                         int readBytes = 0;
@@ -347,6 +347,7 @@ namespace ChaYeFeng
         }
         #endregion
 
+        #region 不可逆的加密方法
         #region MD5加密
         public static string Md532(this string value)
         {
@@ -367,7 +368,7 @@ namespace ChaYeFeng
         /// <returns></returns>
         public static string Md532(this string value, string salt)
         {
-            return salt == null ? value.Md532() : (value + "[" + salt + "]").Md532();
+            return salt == null ? value.Md532() : (value + "『" + salt + "』").Md532();
         }
         #endregion
 
@@ -380,6 +381,95 @@ namespace ChaYeFeng
             SHA1 sha1 = new SHA1CryptoServiceProvider();
             return HashAlgorithmBase(sha1, value, encoding);
         }
+        #endregion
+
+        #region SHA256加密
+        public static string Sha526(this string value)
+        {
+            if (value == null)
+                throw new ArgumentNullException("不能对空字符串进行Sha256加密");
+            Encoding encoding = Encoding.UTF8;
+            SHA256 sha256 = new SHA256Managed();
+            return HashAlgorithmBase(sha256, value, encoding);
+        }
+        #endregion
+
+        #region SHA512加密
+        public static string Sha512(this string value)
+        {
+            if (value == null)
+                throw new ArgumentNullException("不能对空字符串进行Sha512加密");
+            Encoding encoding = Encoding.UTF8;
+            SHA512 sha512 = new SHA512Managed();
+            return HashAlgorithmBase(sha512, value, encoding);
+        }
+        #endregion
+
+        #region HMAC加密
+        public static string HmacSha1(this string value, string keyVal)
+        {
+            if (value == null)
+                throw new ArgumentNullException("不能对空字符串进行HmacSha1加密");
+            Encoding encoding = Encoding.UTF8;
+            HMACSHA1 hmac1 = new HMACSHA1(encoding.GetBytes(keyVal));
+            return HashAlgorithmBase(hmac1, value, encoding);
+        }
+        #endregion
+
+        #region HmacSha256加密
+        public static string HmacSha256(this string value, string keyVal)
+        {
+            if (value == null)
+                throw new ArgumentNullException("不能对空字符串进行HmacSha256加密");
+            Encoding encoding = Encoding.UTF8;
+            HMACSHA256 hmac256 = new HMACSHA256(encoding.GetBytes(keyVal));
+            return HashAlgorithmBase(hmac256, value, encoding);
+        }
+        #endregion
+
+        #region HmacSha384加密
+        public static string HmacSha384(this string value, string keyVal)
+        {
+            if (value == null)
+                throw new ArgumentNullException("不能对空字符串进行HmacSha384加密");
+            Encoding encoding = Encoding.UTF8;
+            HMACSHA384 hmac384 = new HMACSHA384(encoding.GetBytes(keyVal));
+            return HashAlgorithmBase(hmac384, value, encoding);
+        }
+        #endregion
+
+        #region HmacSha512加密
+        public static string HmacSha512(this string value, string keyVal)
+        {
+            if (value == null)
+                throw new ArgumentNullException("不能对空字符串进行HmacSha512加密");
+            Encoding encoding = Encoding.UTF8;
+            HMACSHA512 hmac512 = new HMACSHA512(encoding.GetBytes(keyVal));
+            return HashAlgorithmBase(hmac512, value, encoding);
+        }
+        #endregion
+
+        #region HmacMd5加密
+        public static string HmacMd5(this string value, string keyVal)
+        {
+            if (value == null)
+                throw new ArgumentNullException("不能对空字符串进行HmacMd5加密");
+            Encoding encoding = Encoding.UTF8;
+            HMACMD5 hmacmd5 = new HMACMD5(encoding.GetBytes(keyVal));
+            return HashAlgorithmBase(hmacmd5, value, encoding);
+        }
+        #endregion
+
+        #region HmacRipeMd160加密
+        public static string HmacRipeMd160(this string value, string keyVal)
+        {
+            if (value == null)
+                throw new ArgumentNullException("不能对空字符串进行HmacRipeMd160加密");
+            Encoding encoding = Encoding.UTF8;
+            HMACRIPEMD160 hmacripemd160 = new HMACRIPEMD160(encoding.GetBytes(keyVal));
+            return HashAlgorithmBase(hmacripemd160, value, encoding);
+        }
+        #endregion 
         #endregion
 
     }
