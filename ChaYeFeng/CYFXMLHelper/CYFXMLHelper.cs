@@ -22,7 +22,7 @@ namespace ChaYeFeng
         /// <param name="version"></param>
         /// <param name="Encode"></param>
         /// <returns></returns>
-        public static XmlDocument CreateXmlDoc(string version, string Encode)
+        public static XmlDocument CreateXmlDocWithVersionEncode(string version, string Encode)
         {
             xmldoc = CYFXMLHelper.CreateXmlDoc();
             XmlDeclaration xmlDecl;
@@ -37,7 +37,7 @@ namespace ChaYeFeng
         /// <param name="name">根节点名称</param>
         /// <param name="type">根节点的一个属性</param>
         /// <returns></returns>
-        public static XmlDocument CreateXmlDoc(string name, string type)
+        public static XmlDocument CreateXmlDocWithNameType(string name, string type)
         {
             xmldoc = new XmlDocument();
             try
@@ -230,7 +230,7 @@ namespace ChaYeFeng
                     xmlelem = (XmlElement)curNode;
                     if (string.IsNullOrEmpty(attribute))
                         xmlelem.InnerText = value;
-                    else 
+                    else
                     {
                         xmlelem.SetAttribute(attribute, value);
                     }
@@ -265,10 +265,162 @@ namespace ChaYeFeng
         }
         #endregion
 
+        #region 读xml资源到dataset中
+        /// <summary>
+        /// 读xml资源到dataset中
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static DataSet GetDataSet(string source)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                xmldoc = new XmlDocument();
+                xmldoc.LoadXml(source);
+                XmlNodeReader xnr = new XmlNodeReader(xmldoc);
+                ds.ReadXml(xnr);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region 获取中xml文件中指定节点的数据
+        /// <summary>
+        /// 获取中xml文件中指定节点的数据
+        /// </summary>
+        /// <param name="doc"></param>
+        /// <param name="nodeName"></param>
+        /// <returns></returns>
+        public static string GetNodeInfoByNodeName(XmlDocument doc, string nodeName)
+        {
+            string xmlString = "";
+            XmlElement root = doc.DocumentElement;
+            XmlNode node = root.SelectSingleNode(nodeName);
+            if (node != null)
+                xmlString = node.InnerText;
+            return xmlString;
+        }
+        #endregion
+
+        #region 读取xml资源到DataTable中
+        /// <summary>
+        /// 读取xml资源到DataTable中
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="tableName"></param>
+        /// <returns></returns>
+        public static DataTable GetTable(string source, string tableName)
+        {
+            DataTable dt = new DataTable();
+            DataSet ds = GetDataSet(source);
+            if (ds.Tables.Count > 0 && ds.Tables.Contains(tableName))
+                dt = ds.Tables[tableName];
+            return dt;
+        }
+        #endregion
+
+        #region 读取xml资源中指定的DataTable的指定行指定列名的值
+        /// <summary>
+        /// 读取xml资源中指定的DataTable的指定行指定列的值
+        /// </summary>
+        /// <param name="source">xml资源</param>
+        /// <param name="tableName">表名</param>
+        /// <param name="rowIndex">行号</param>
+        /// <param name="ColumnIndex">列名</param>
+        /// <returns></returns>
+        public static object GetTableCell(string source, string tableName, int rowIndex, string ColumnName)
+        {
+            DataTable dt = GetTable(source, tableName);
+            int columnIndex;
+            if (dt.Columns.Contains(ColumnName))
+            {
+                columnIndex = dt.Columns.IndexOf(ColumnName);
+                return GetTableCell(source, tableName, rowIndex, columnIndex);
+            }
+            return null;
+        }
+        #endregion
+
+        #region 读取xml资源中指定的DataTable的指定行指定列号的值
+        /// <summary>
+        /// 读取xml资源中指定的DataTable的指定行指定列号的值
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="tableName"></param>
+        /// <param name="rowIndex"></param>
+        /// <param name="ColumnIndex"></param>
+        /// <returns></returns>
+        public static object GetTableCell(string source, string tableName, int rowIndex, int ColumnIndex)
+        {
+            DataTable dt = GetTable(source, tableName);
+            if (dt.Columns.Count > 0 && dt.Rows.Count > 0
+                && dt.Columns.Count > ColumnIndex && dt.Rows.Count > rowIndex)
+            {
+                return dt.Rows[rowIndex][ColumnIndex];
+            }
+            else
+                return null;
+        }
+        #endregion
+
         #region 添加子节点
         public static void AddNode(XmlDocument curDoc, XmlNode node)
         {
             curDoc.AppendChild(node);
+        }
+        #endregion
+
+        #region 将DataTable写入xml文件中
+        /// <summary>
+        /// 指定DataTable生产xml文件
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <param name="fileName"></param>
+        public static void DataTableWriteToXml(DataTable dt, string fileName)
+        {
+            DataSet ds = new DataSet();
+            DataTable newdt = dt.Copy();
+            ds.Tables.Add(newdt);
+            ds.WriteXml(fileName);
+        }
+        #endregion
+
+        #region 将DataTable以指定的根结点名称方式写入xml文件
+        /// <summary>
+        /// 将DataTable以指定的根结点名称方式写入xml文件
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <param name="rootName"></param>
+        /// <param name="fileName"></param>
+        public static void SaveTableToFile(DataTable dt, string rootName, string fileName)
+        {
+            DataSet ds = new DataSet(rootName);
+            DataTable newdt = dt.Copy();
+            ds.Tables.Add(newdt);
+            ds.WriteXml(fileName);
+        }
+        #endregion
+
+        #region 使用DataSet方式更新xml文件节点
+        public static bool UpdateTableCell(string fileName,string tableName,int rowIndex,string colName,string content)
+        {
+            DataSet ds = new DataSet();
+            ds.ReadXml(fileName);
+            if(!ds.Tables.Contains(tableName))
+            return false;
+            DataTable dt = ds.Tables[tableName];
+            if (dt.Rows.Count > rowIndex && dt.Columns.Contains(colName))
+            {
+                dt.Rows[rowIndex][colName] = content;
+                ds.WriteXml(fileName);
+                return true;
+            }
+            return false;
         }
         #endregion
     }

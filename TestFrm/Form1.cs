@@ -76,7 +76,10 @@ namespace TestFrm
                 XmlDocument xmldoc = CYFXMLHelper.CreateXmlDoc();
                 CYFXMLHelper.CreateXmlFromDataTable(xmldoc, dt);
                 rtbResult.Text = CYFXMLHelper.XmlDocToString(xmldoc, true, true);
-                CYFXMLHelper.XmlToDataSet(rtbResult.Text);
+                DataSet ds = CYFXMLHelper.XmlToDataSet(rtbResult.Text);
+                if (ds.Tables.Count > 0)
+                    dataGridView1.DataSource = ds.Tables[0];
+                CYFXMLHelper.DataTableWriteToXml(ds.Tables[0], @"F:\test.xml");
             }
             catch (Exception ex)
             {
