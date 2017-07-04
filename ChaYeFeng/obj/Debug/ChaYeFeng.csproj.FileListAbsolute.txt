@@ -3,4 +3,3 @@ F:\CodeProjects\ChaYeFeng\ChaYeFeng\ChaYeFeng\bin\Debug\ChaYeFeng.pdb
 F:\CodeProjects\ChaYeFeng\ChaYeFeng\ChaYeFeng\obj\Debug\ChaYeFeng.dll
 F:\CodeProjects\ChaYeFeng\ChaYeFeng\ChaYeFeng\obj\Debug\ChaYeFeng.pdb
 F:\CodeProjects\ChaYeFeng\ChaYeFeng\ChaYeFeng\obj\Debug\ChaYeFeng.dll.licenses
-F:\CodeProjects\ChaYeFeng\ChaYeFeng\ChaYeFeng\obj\Debug\ChaYeFeng.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\WSTest\bin\WSTest.dll
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\WSTest\bin\WSTest.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\WSTest\obj\Debug\WSTest.csprojResolveAssemblyReference.cache
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\WSTest\obj\Debug\WSTest.dll
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\WSTest\obj\Debug\WSTest.pdb

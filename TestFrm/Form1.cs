@@ -58,33 +58,37 @@ namespace TestFrm
             //    }
             //}
 
-            try
-            {
-                DataTable dt = new DataTable();
-                DataColumn col = new DataColumn("col1", typeof(string));
-                dt.Columns.Add(col);
-                col = new DataColumn("col2", typeof(string));
-                dt.Columns.Add(col);
-                col = new DataColumn("col3", typeof(string));
-                dt.Columns.Add(col);
-                DataRow dr = dt.NewRow();
-                dr.ItemArray = new object[] { "1", "回火", "啊啊" };
-                dt.Rows.Add(dr);
-                dr = dt.NewRow();
-                dr.ItemArray = new object[] { "2", "哦噢", "呃呃" };
-                dt.Rows.Add(dr);
-                XmlDocument xmldoc = CYFXMLHelper.CreateXmlDoc();
-                CYFXMLHelper.CreateXmlFromDataTable(xmldoc, dt);
-                rtbResult.Text = CYFXMLHelper.XmlDocToString(xmldoc, true, true);
-                DataSet ds = CYFXMLHelper.XmlToDataSet(rtbResult.Text);
-                if (ds.Tables.Count > 0)
-                    dataGridView1.DataSource = ds.Tables[0];
-                CYFXMLHelper.DataTableWriteToXml(ds.Tables[0], @"F:\test.xml");
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            //try
+            //{
+            //    DataTable dt = new DataTable();
+            //    DataColumn col = new DataColumn("col1", typeof(string));
+            //    dt.Columns.Add(col);
+            //    col = new DataColumn("col2", typeof(string));
+            //    dt.Columns.Add(col);
+            //    col = new DataColumn("col3", typeof(string));
+            //    dt.Columns.Add(col);
+            //    DataRow dr = dt.NewRow();
+            //    dr.ItemArray = new object[] { "1", "回火", "啊啊" };
+            //    dt.Rows.Add(dr);
+            //    dr = dt.NewRow();
+            //    dr.ItemArray = new object[] { "2", "哦噢", "呃呃" };
+            //    dt.Rows.Add(dr);
+            //    XmlDocument xmldoc = CYFXMLHelper.CreateXmlDoc();
+            //    CYFXMLHelper.CreateXmlFromDataTable(xmldoc, dt);
+            //    rtbResult.Text = CYFXMLHelper.XmlDocToString(xmldoc, true, true);
+            //    DataSet ds = CYFXMLHelper.XmlToDataSet(rtbResult.Text);
+            //    if (ds.Tables.Count > 0)
+            //        dataGridView1.DataSource = ds.Tables[0];
+            //    CYFXMLHelper.DataTableWriteToXml(ds.Tables[0], @"F:\test.xml");
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw ex;
+            //}
+            CodeFactory codeFactory = new CodeFactory();
+            string code = string.Empty;
+            string result =
+            codeFactory.GetOriginTypeCode("http://localhost:35250/GetName.asmx?wsdl", out code);
         }
 
         private void button1_Click(object sender, EventArgs e)
