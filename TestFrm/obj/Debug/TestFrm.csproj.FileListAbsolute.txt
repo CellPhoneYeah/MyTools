@@ -11,3 +11,5 @@ F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\bin\Debug\ChaYeFeng.dll
 F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\bin\Debug\ChaYeFeng.pdb
 F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\bin\Debug\TestMEFInterface.dll
 F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\bin\Debug\TestMEFInterface.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\bin\Debug\TestMEF.dll
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestFrm\bin\Debug\TestMEF.pdb

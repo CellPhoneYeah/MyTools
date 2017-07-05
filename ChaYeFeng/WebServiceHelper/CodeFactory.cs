@@ -161,9 +161,22 @@ namespace ChaYeFeng
                 code.Append(")");
                 //方法体代码
                 code.AppendLine("{");
-                code.AppendLine(typeof())
+                //创建协议信息实体
+                code.AppendLine(typeof(RemoteCallWrapper).FullName 
+                    + "wrapper = new " 
+                    + typeof(RemoteCallWrapper).FullName + "();");
+                code.AppendLine("wrapper.Method = \"" + curMethod.Name + "\";");
+                code.AppendLine("wrapper.Contract = \"" + type.FullName + "\";");
                 code.AppendLine("}");
+
+                for (int i = 0; i < paramInfo.Length; i++)
+                {
+                    code.AppendLine(string.Format("wrapper.Parameters.Add({0})", paramInfo[i].Name));
+                }
+
+                //code.AppendLine("byte[] buff = "+typeof(ObjectBinaryConverter)
             }
+            return code;
         }
 
         /// <summary>

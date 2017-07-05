@@ -15,6 +15,7 @@ using System.Collections;
 using System.Security.Cryptography;
 using System.IO;
 using System.Xml;
+using TestMEF;
 
 namespace TestFrm
 {
@@ -85,10 +86,20 @@ namespace TestFrm
             //{
             //    throw ex;
             //}
-            CodeFactory codeFactory = new CodeFactory();
-            string code = string.Empty;
-            string result =
-            codeFactory.GetOriginTypeCode("http://localhost:35250/GetName.asmx?wsdl", out code);
+            //CodeFactory codeFactory = new CodeFactory();
+            //string code = string.Empty;
+            //string result =
+            //codeFactory.GetOriginTypeCode("http://localhost:35250/GetName.asmx?wsdl", out code);
+            Staf s = new Staf();
+            s.Name = "叶晓峰";
+            s.Sex = 1;
+            byte[] buff = ByteConvertHelper.ObjectToBytes(s);
+            object obj = ByteConvertHelper.BytesToObject(buff);
+            Staf news = null;
+            if (obj is Staf)
+            {
+                news = obj as Staf;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

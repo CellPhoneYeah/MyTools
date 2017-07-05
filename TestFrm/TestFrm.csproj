@@ -84,6 +84,10 @@
       <Project>{5b2ff275-50ed-4206-9ecd-6f6fcad695c4}</Project>
       <Name>TestMEFInterface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TestMEF\TestMEF.csproj">
+      <Project>{c9814d99-7b57-405c-8015-a6c709a720df}</Project>
+      <Name>TestMEF</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

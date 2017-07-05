@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ByteConvertHelper\ByteConvertHelper.cs" />
     <Compile Include="ChayefengDAL\CYFDALConfig.cs" />
     <Compile Include="ChayefengDAL\CYFSqlDALHelper.cs" />
     <Compile Include="ChayefengDAL\DALConfig.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ChayefengDAL\SQLServerDAL.cs" />
     <Compile Include="WebServiceHelper\CodeFactory.cs" />
+    <Compile Include="WebServiceHelper\RemoteCallWrapper.cs" />
     <Compile Include="WebServiceHelper\WebServiceHelper.cs" />
     <Compile Include="WebServiceHelper\WSWrapProxyFactory.cs" />
     <Compile Include="WebServiceHelper\WSWrapTypeCache.cs" />
