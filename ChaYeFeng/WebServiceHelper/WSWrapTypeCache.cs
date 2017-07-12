@@ -5,29 +5,30 @@ using System.Text;
 
 namespace ChaYeFeng
 {
-    public class WSWrapTypeCache
+    public class WsWrapTypeCache
     {
         #region 静态成员
-        static WSWrapTypeCache _instance;
-        static object Locker = new object();
+        static WsWrapTypeCache _instance;
+        static readonly object _locker = new object();
         #endregion
 
         #region 实例成员
-        private Dictionary<string, Type> cache;
+        private readonly Dictionary<string, Type> _cache;
         #endregion
 
         #region 静态构造函数
-        public static WSWrapTypeCache Current
+        public static WsWrapTypeCache Current
         {
             get
             {
                 if (_instance == null)
                 {
-                    lock (Locker)
+                    lock (_locker)
                     {
                         if (_instance == null)
-                            _instance = new WSWrapTypeCache();
+                            _instance = new WsWrapTypeCache();
                     }
+                    return _instance;
                 }
                 return _instance;
             }
@@ -35,9 +36,9 @@ namespace ChaYeFeng
         #endregion
 
         #region 实例构造函数
-        private WSWrapTypeCache()
+        private WsWrapTypeCache()
         {
-            cache = new Dictionary<string, Type>();
+            _cache = new Dictionary<string, Type>();
         }
         #endregion
 
@@ -48,18 +49,11 @@ namespace ChaYeFeng
         /// <returns></returns>
         public Type Get(string wsdlAdressTypeName)
         {
-            if (cache == null)
+            if (_cache == null)
                 return null;
             if (string.IsNullOrEmpty(wsdlAdressTypeName))
                 throw new ArgumentNullException("wsdlAdressTypeName");
-            if (cache.ContainsKey(wsdlAdressTypeName))
-            {
-                return cache[wsdlAdressTypeName];
-            }
-            else
-            {
-                return null;
-            }
+            return _cache.ContainsKey(wsdlAdressTypeName) ? _cache[wsdlAdressTypeName] : null;
         }
 
         /// <summary>
@@ -68,12 +62,12 @@ namespace ChaYeFeng
         /// <param name="wsdlAdressTypeName">服务地址+"@"+接口全名（包括命名空间）</param>
         public void Put(string wsdlAdressTypeName,Type type)
         {
-            if (!cache.ContainsKey(wsdlAdressTypeName))
+            if (!_cache.ContainsKey(wsdlAdressTypeName))
             {
-                lock (Locker)
+                lock (_locker)
                 {
-                    if (!cache.ContainsKey(wsdlAdressTypeName))
-                        cache.Add(wsdlAdressTypeName, type);
+                    if (!_cache.ContainsKey(wsdlAdressTypeName))
+                        _cache.Add(wsdlAdressTypeName, type);
                 }
             }
         }

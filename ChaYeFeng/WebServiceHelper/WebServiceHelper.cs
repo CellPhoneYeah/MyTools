@@ -21,8 +21,8 @@ namespace ChaYeFeng
 
         public static object InvokeWebService(string url, string className, string methodName, object[] args)
         {
-            string nameSpace = "ChaYeFeng.WebService.DynamicWebCalling";
-            if (className == null||className=="")
+            const string nameSpace = "ChaYeFeng.WebService.DynamicWebCalling";
+            if (string.IsNullOrEmpty(className))
             {
                 className = WebServiceHelper.GetWsClassName(url);
             }

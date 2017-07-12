@@ -80,11 +80,13 @@ namespace ChaYeFeng
                 CSharpCodeProvider provider = new CSharpCodeProvider();
 
                 //调用编译器的参数
-                CompilerParameters parameter = new CompilerParameters();
-                //是否生成可执行文件
-                parameter.GenerateExecutable = false;
-                //是否在内存中生成输出
-                parameter.GenerateInMemory = true;
+                CompilerParameters parameter = new CompilerParameters
+                {
+                    //是否生成可执行文件
+                    GenerateExecutable = false,
+                    //是否在内存中生成输出
+                    GenerateInMemory = true
+                };
                 //添加当前项目引用的程序集
                 parameter.ReferencedAssemblies.Add("System.dll");
                 parameter.ReferencedAssemblies.Add("System.XML.dll");
@@ -100,7 +102,7 @@ namespace ChaYeFeng
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw;
             }
         } 
         #endregion
@@ -109,7 +111,7 @@ namespace ChaYeFeng
         /// 生成类
         /// </summary>
         /// <returns></returns>
-        public StringBuilder GetCodeSB(string className,string originTypeName,Type type)
+        public StringBuilder GetCodeSb(string className,string originTypeName,Type type)
         {
             StringBuilder code = new StringBuilder();
 
@@ -136,23 +138,24 @@ namespace ChaYeFeng
             }
 
             //遍历各个方法，获取其签名，作为新类型的方法
-            foreach (MethodInfo curMethod in methods)
+            foreach (var curMethod in methods)
             {
                 //跳过释放方法
                 if (curMethod.Name=="Dispose")
                     continue;
 
                 //获取方法返回值类型的全名
-                string returnTypeFullName = GetTypeFullName(curMethod.ReturnType);
+                var returnTypeFullName = GetTypeFullName(curMethod.ReturnType);
                 //得到方法的各个参数类型
-                ParameterInfo[] paramInfo = curMethod.GetParameters();
+                var paramInfo = curMethod.GetParameters();
                 //添加方法头代码
-                code.AppendLine(string.Format("{0} {1}.{2}("
-                    , returnTypeFullName
-                    , curMethod.DeclaringType.FullName
-                    , curMethod.Name));
+                if (curMethod.DeclaringType != null)
+                    code.AppendLine(string.Format("{0} {1}.{2}("
+                        , returnTypeFullName
+                        , curMethod.DeclaringType.FullName
+                        , curMethod.Name));
                 //添加方法的参数代码
-                for (int i = 0; i < paramInfo.Length; i++)
+                for (var i = 0; i < paramInfo.Length; i++)
                 {
                     code.AppendFormat("{0} {1}", GetTypeFullName(paramInfo[i].ParameterType), paramInfo[i].Name);
                     if (i < paramInfo.Length - 1)
@@ -190,7 +193,7 @@ namespace ChaYeFeng
             //如果是泛型，则返回
             if (type.IsGenericType)
             {
-                Type[] genType = type.GetGenericArguments();
+                var genType = type.GetGenericArguments();
                 result = string.Format("List<{0}>", genType[0].FullName);
             }
             else if (type.FullName == "System.Void")
