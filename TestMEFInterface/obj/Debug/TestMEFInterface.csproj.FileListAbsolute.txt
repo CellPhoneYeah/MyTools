@@ -2,4 +2,3 @@ F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestMEFInterface\bin\Debug\TestMEFInterface.
 F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestMEFInterface\bin\Debug\TestMEFInterface.pdb
 F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestMEFInterface\obj\Debug\TestMEFInterface.dll
 F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestMEFInterface\obj\Debug\TestMEFInterface.pdb
-F:\CodeProjects\ChaYeFeng\ChaYeFeng\TestMEFInterface\obj\Debug\TestMEFInterface.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\ConsoleTest\bin\Debug\ConsoleTest.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\ConsoleTest\bin\Debug\ConsoleTest.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\ConsoleTest\obj\Debug\ConsoleTest.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\ConsoleTest\obj\Debug\ConsoleTest.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\ConsoleTest\obj\Debug\ConsoleTest.csprojResolveAssemblyReference.cache
