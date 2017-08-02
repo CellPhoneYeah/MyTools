@@ -1,0 +1,4 @@
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPClientDemo\bin\Debug\TCPClientDemo.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPClientDemo\bin\Debug\TCPClientDemo.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPClientDemo\obj\Debug\TCPClientDemo.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPClientDemo\obj\Debug\TCPClientDemo.pdb

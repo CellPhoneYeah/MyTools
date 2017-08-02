@@ -1,9 +1,15 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Xml;
+using System.Xml.Serialization;
+using ChaYeFeng;
+using TestMEF;
 
 namespace ConsoleTest
 {
@@ -143,8 +149,67 @@ namespace ConsoleTest
 //                }
 //            }
 //            Console.ReadKey();
+//            char CR = ((char)0x0d); //回车符
+//            char LF = ((char)0x0a); //换行符
+//            string demoStr = @"%$1|A50NF060009C|20170627143948|admin|170627_013|3||||PCT
+//MiniTube|PWMBC07C.1|2017.10.12|6.83|||||ng/m||||||G|G||||||||||";
+//            if (!demoStr.Contains("$1"))
+//                return;
+
+//            int startIndex = demoStr.IndexOf("$1");
+
+//            int endIndex = demoStr.LastIndexOf("||||||||||");
+//            string str = demoStr.Substring(startIndex, endIndex - startIndex + 1);
+//            var resultStrArray = str.Split('|');
+//            var strArray = resultStrArray[4].Split('_');
+//            if (strArray.Length > 1)
+//            {
+//                string tempSid = strArray[1];
+//                while (tempSid.StartsWith("0"))
+//                {
+//                    tempSid = tempSid.TrimStart('0');
+//                }
+//            }
+
+//            string tempcode = resultStrArray[9].Replace("\r\n", "");
 
 
+//            Console.ReadKey();
+
+            //string strHelloWord= @"hello word";
+            //string[] strlist = strHelloWord.Split(new string[] {"llo"},StringSplitOptions.RemoveEmptyEntries);
+            //foreach (var s in strlist)
+            //{
+            //    Console.WriteLine(s);
+            //}
+            //string str = string.Empty;
+            //int charInt;
+            //do
+            //{
+            //    charInt = Console.Read();
+            //    str += ((char) charInt).ToString();
+            //} while (charInt != 13);
+            //str.Trim('\t');
+            //string temp;
+            //int value = 0;
+            //string result = string.Empty;
+            //for (int i = 1; i < str.Length+1; i++)
+            //{
+            //    if (i % 2 == 0&&i>0)
+            //    {
+            //        temp = str.Substring(i-2, 2);
+            //        value = int.Parse(temp);
+            //        result += ((char) value).ToString();
+            //    }
+            //}
+            //Console.WriteLine(result);
+            Hashtable ht = new Hashtable();
+            ht.Add("insertName","测试调用服务工具");
+            XmlDocument doc = WebServiceCaller.QueryPostWebService("http://localhost:8099/GetName.asmx", "GetInsert", ht);
+            XmlDocument doc2 = WebServiceCaller.QuerySoapWebService("http://localhost:8099/GetName.asmx", "GetInsert", ht);
+            Console.WriteLine(doc.InnerXml);
+            Console.WriteLine(doc2.InnerXml);
+            Console.ReadKey();
         }
     }
 }

@@ -22,5 +22,11 @@ namespace WSTest
         {
             return "Hello World";
         }
+
+        [WebMethod]
+        public string GetInsert(string insertName)
+        {
+            return insertName;
+        }
     }
 }

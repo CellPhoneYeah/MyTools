@@ -1,0 +1,5 @@
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPServerDemo\bin\Debug\TCPServerDemo.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPServerDemo\bin\Debug\TCPServerDemo.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPServerDemo\obj\Debug\FtpServerDemo.csprojResolveAssemblyReference.cache
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPServerDemo\obj\Debug\TCPServerDemo.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPServerDemo\obj\Debug\TCPServerDemo.pdb

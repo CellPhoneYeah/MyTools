@@ -44,6 +44,16 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChaYeFeng\ChaYeFeng.csproj">
+      <Project>{635e1880-c1a2-4fff-881c-677d704f5c15}</Project>
+      <Name>ChaYeFeng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestMEF\TestMEF.csproj">
+      <Project>{c9814d99-7b57-405c-8015-a6c709a720df}</Project>
+      <Name>TestMEF</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

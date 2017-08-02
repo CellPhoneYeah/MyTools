@@ -70,6 +70,7 @@
     <Compile Include="ChayefengDAL\SQLServerDAL.cs" />
     <Compile Include="WebServiceHelper\CodeFactory.cs" />
     <Compile Include="WebServiceHelper\RemoteCallWrapper.cs" />
+    <Compile Include="WebServiceHelper\WebServiceCaller.cs" />
     <Compile Include="WebServiceHelper\WebServiceHelper.cs" />
     <Compile Include="WebServiceHelper\WSWrapProxyFactory.cs" />
     <Compile Include="WebServiceHelper\WSWrapTypeCache.cs" />

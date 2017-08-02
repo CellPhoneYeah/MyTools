@@ -3,3 +3,9 @@ F:\CodeProjects\ChaYeFeng\ChaYeFeng\ConsoleTest\bin\Debug\ConsoleTest.pdb
 F:\CodeProjects\ChaYeFeng\ChaYeFeng\ConsoleTest\obj\Debug\ConsoleTest.exe
 F:\CodeProjects\ChaYeFeng\ChaYeFeng\ConsoleTest\obj\Debug\ConsoleTest.pdb
 F:\CodeProjects\ChaYeFeng\ChaYeFeng\ConsoleTest\obj\Debug\ConsoleTest.csprojResolveAssemblyReference.cache
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\ConsoleTest\bin\Debug\TestMEF.dll
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\ConsoleTest\bin\Debug\TestMEFInterface.dll
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\ConsoleTest\bin\Debug\TestMEF.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\ConsoleTest\bin\Debug\TestMEFInterface.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\ConsoleTest\bin\Debug\ChaYeFeng.dll
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\ConsoleTest\bin\Debug\ChaYeFeng.pdb
