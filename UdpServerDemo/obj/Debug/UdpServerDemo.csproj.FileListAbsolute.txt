@@ -1,0 +1,5 @@
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\UdpServerDemo\bin\Debug\UdpServerDemo.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\UdpServerDemo\bin\Debug\UdpServerDemo.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\UdpServerDemo\obj\Debug\UdpServerDemo.csprojResolveAssemblyReference.cache
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\UdpServerDemo\obj\Debug\UdpServerDemo.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\UdpServerDemo\obj\Debug\UdpServerDemo.pdb

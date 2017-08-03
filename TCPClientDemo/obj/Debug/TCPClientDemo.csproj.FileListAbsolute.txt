@@ -1,4 +1,5 @@
-F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPClientDemo\bin\Debug\TCPClientDemo.exe
-F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPClientDemo\bin\Debug\TCPClientDemo.pdb
-F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPClientDemo\obj\Debug\TCPClientDemo.exe
-F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPClientDemo\obj\Debug\TCPClientDemo.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TcpClientDemo\bin\Debug\TcpClientDemo.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TcpClientDemo\bin\Debug\TcpClientDemo.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TcpClientDemo\obj\Debug\TcpClientDemo.csprojResolveAssemblyReference.cache
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TcpClientDemo\obj\Debug\TcpClientDemo.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TcpClientDemo\obj\Debug\TcpClientDemo.pdb

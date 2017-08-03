@@ -1,0 +1,8 @@
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\CustomBrowser\bin\Debug\CustomBrowser.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\CustomBrowser\bin\Debug\CustomBrowser.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\CustomBrowser\obj\Debug\CustomBrowser.csprojResolveAssemblyReference.cache
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\CustomBrowser\obj\Debug\CustomBrowser.Form1.resources
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\CustomBrowser\obj\Debug\CustomBrowser.Properties.Resources.resources
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\CustomBrowser\obj\Debug\CustomBrowser.csproj.GenerateResource.Cache
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\CustomBrowser\obj\Debug\CustomBrowser.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\CustomBrowser\obj\Debug\CustomBrowser.pdb

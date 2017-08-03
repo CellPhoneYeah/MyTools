@@ -8,11 +8,11 @@ using System.Text;
 
 namespace TCPClientDemo
 {
-    public class TCPClientManager
+    public class FtpClientManager
     {
         private NetworkCredential credential = new NetworkCredential("叶晓峰","0419");
         private IPAddress ServerAdress = IPAddress.Parse("192.168.1.175");
-        public TCPClientManager()
+        public FtpClientManager()
         { 
             
         }

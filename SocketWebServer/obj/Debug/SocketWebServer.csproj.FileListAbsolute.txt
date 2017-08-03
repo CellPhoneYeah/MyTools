@@ -1,0 +1,5 @@
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\SocketWebServer\bin\Debug\SocketWebServer.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\SocketWebServer\bin\Debug\SocketWebServer.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\SocketWebServer\obj\Debug\SocketWebServer.csprojResolveAssemblyReference.cache
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\SocketWebServer\obj\Debug\SocketWebServer.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\SocketWebServer\obj\Debug\SocketWebServer.pdb

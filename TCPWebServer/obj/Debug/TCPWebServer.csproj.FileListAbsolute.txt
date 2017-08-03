@@ -1,0 +1,5 @@
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPWebServer\bin\Debug\TCPWebServer.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPWebServer\bin\Debug\TCPWebServer.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPWebServer\obj\Debug\TCPWebServer.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPWebServer\obj\Debug\TCPWebServer.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\TCPWebServer\obj\Debug\TCPWebServer.csprojResolveAssemblyReference.cache

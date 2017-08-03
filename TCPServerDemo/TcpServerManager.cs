@@ -8,13 +8,13 @@ using System.Threading;
 
 namespace TCPServerDemo
 {
-    public class FtpServerManager
+    public class TcpServerManager
     {
         private IPAddress serverAdress = IPAddress.Parse("192.168.1.175");
         private int serverPort = 9099;
         Thread listenThread;
         TcpListener listener;
-        public FtpServerManager()
+        public TcpServerManager()
         {
             listener = new TcpListener(serverAdress, serverPort);
             listenThread = new Thread(new ParameterizedThreadStart(ListenMethod));
@@ -54,7 +54,7 @@ namespace TCPServerDemo
                             byte[] tempList = new byte[clientStream.Length];
                             clientStream.Read(tempList, 0, tempList.Length);
                             string messageFromClient = Encoding.Default.GetString(tempList);
-                            Console.WriteLine("接收到来自客户端的消息" + messageFromClient);
+                            Console.WriteLine(DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")+"\r\n" + messageFromClient);
                         }
                         catch
                         {

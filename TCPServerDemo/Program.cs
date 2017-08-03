@@ -12,7 +12,7 @@ namespace TCPServerDemo
     {
         static void Main(string[] args)
         {
-            FtpServerManager server = new FtpServerManager();
+            TcpServerManager server = new TcpServerManager();
             server.Start();
         }
     }
