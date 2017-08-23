@@ -42,6 +42,8 @@
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Channels" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
@@ -58,6 +60,7 @@
     <Compile Include="ChayefengDAL\DALConfig.cs" />
     <Compile Include="CYFCache\CacheDictionary.cs" />
     <Compile Include="CYFCache\CacheManager.cs" />
+    <Compile Include="CYFChannelFactory\CYFChannelFactory.cs" />
     <Compile Include="CYFConfigHelper\CYFConfigHelper.cs" />
     <Compile Include="CYFEncrypt\CYFEncryptUtil.cs" />
     <Compile Include="CYFLog\CYFLog.cs" />
@@ -81,6 +84,7 @@
   <ItemGroup>
     <Content Include="README.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

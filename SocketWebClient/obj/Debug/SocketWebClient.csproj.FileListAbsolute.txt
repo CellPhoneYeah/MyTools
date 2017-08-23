@@ -1,0 +1,5 @@
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\SocketWebClient\bin\Debug\SocketWebClient.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\SocketWebClient\bin\Debug\SocketWebClient.pdb
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\SocketWebClient\obj\Debug\SocketWebClient.csprojResolveAssemblyReference.cache
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\SocketWebClient\obj\Debug\SocketWebClient.exe
+F:\CodeProjects\ChaYeFeng\ChaYeFeng\SocketWebClient\obj\Debug\SocketWebClient.pdb

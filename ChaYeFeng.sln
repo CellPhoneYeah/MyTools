@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpServerDemo", "UdpServerD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpClientDemo", "UdpClientDemo\UdpClientDemo.csproj", "{08C32E6E-4DFA-4940-B637-E532E0A43557}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketWebClient", "SocketWebClient\SocketWebClient.csproj", "{261FC0B7-C792-4254-AB6D-41A78E833A37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{08C32E6E-4DFA-4940-B637-E532E0A43557}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08C32E6E-4DFA-4940-B637-E532E0A43557}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08C32E6E-4DFA-4940-B637-E532E0A43557}.Release|Any CPU.Build.0 = Release|Any CPU
+		{261FC0B7-C792-4254-AB6D-41A78E833A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{261FC0B7-C792-4254-AB6D-41A78E833A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{261FC0B7-C792-4254-AB6D-41A78E833A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{261FC0B7-C792-4254-AB6D-41A78E833A37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,5 +112,6 @@ Global
 		{38026A31-7639-46B2-AF81-0E4D9759CBC7} = {8E1936F7-49BC-4E6E-8363-593EECC36418}
 		{F745CFC3-B701-49B0-9950-5DBBE4DBE990} = {8E1936F7-49BC-4E6E-8363-593EECC36418}
 		{08C32E6E-4DFA-4940-B637-E532E0A43557} = {8E1936F7-49BC-4E6E-8363-593EECC36418}
+		{261FC0B7-C792-4254-AB6D-41A78E833A37} = {8E1936F7-49BC-4E6E-8363-593EECC36418}
 	EndGlobalSection
 EndGlobal
